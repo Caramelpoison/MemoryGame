@@ -35,7 +35,7 @@ body {
 .card {
     width: 100px;
     height: 100px;
-    background: url("images/hidden.png");
+    background-image: url("images/hidden.png");
     border: 3px solid #ccc;
     cursor: pointer;
 }

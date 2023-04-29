@@ -11,6 +11,7 @@ const cardArea = document.getElementById('cardArea')
 const moveCounter = document.getElementById('moveCounter')
 const restartButton = document.getElementById('restartButton')
 const timeD = document.getElementById('time')
+
 const images = [
     './images/pic1.jpg',    './images/pic1.jpg',
     './images/pic2.jpg',    './images/pic2.jpg',
@@ -28,6 +29,7 @@ const images = [
     './images/pic14.jpg',   './images/pic14.jpg',
     './images/pic15.jpg',   './images/pic15.jpg',
 ];
+
 
 
 
@@ -84,7 +86,7 @@ function cardClick(event) {
         return;
     }
     this.classList.add('shown');
-    this.querySelector('img').style.display = 'block'
+    this.querySelector('img').style.display = 'block';
         console.log(`Previous is ${prvImg}`)
 
         if (!startTime) {
@@ -92,8 +94,8 @@ function cardClick(event) {
             setInterval(function() {
               elapsedTime = Date.now() - startTime;
               const minutes = Math.floor(elapsedTime / 60000);
-              const seconds = Math.floor((elapsedTime % 60000) / 1000)
-              timeD.innerText = `Time: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`
+              const seconds = Math.floor((elapsedTime % 60000) / 1000);
+              timeD.innerText = `Time: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
             }, 1000);
           }
 
@@ -141,4 +143,4 @@ function restartGame() {
     cardArea.innerHTML = ''
     startGame()
 }
-restartButton.addEventListener('click', restartGame)
+restartButton.addEventListener('click', restartGame);
