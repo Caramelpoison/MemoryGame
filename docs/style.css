@@ -1,0 +1,54 @@
+body {
+    text-align: center;
+    background:  url('./images/background.webp');
+    background-size: cover;
+    height: 100vh;
+}
+.title{
+    text-align: center;
+    color: aliceblue;
+    padding-top: 10px;
+    }
+
+#moveCounter{
+    text-align: left;
+}
+.row1 {
+    color: aliceblue;
+    display: flex;
+    justify-content: space-around;
+}
+
+#restartButton{
+    text-align: center;
+}
+
+#cardArea {
+        display: grid;
+        grid-template-columns: repeat(6, 100px);
+        grid-template-rows: repeat(5, 100px);
+        grid-gap: 20px;
+        justify-content: center;
+        margin: 20px auto;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background: url("images/hidden.png");
+    border: 3px solid #ccc;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+  }
+
+.card.matched {
+    background-color: #7cfc00;
+}
+
+.card.shown {
+    background-color: #fff;
+}
